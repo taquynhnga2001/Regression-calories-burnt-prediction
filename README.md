@@ -1,6 +1,6 @@
 # Calorie Burn Prediction
 
-This project focuses on building and fine-tuning machine learning **regression models** to predict the number of calories burned based on features such as activity duration, heart rate, and other physiological factors. The dataset used for this project contains information about users and their physical activities.
+This project focuses on building and fine-tuning machine learning regression models to predict the number of calories burned based on features such as activity duration, heart rate, and other physiological factors. The dataset used for this project contains information about users and their physical activities.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -11,7 +11,7 @@ This project focuses on building and fine-tuning machine learning **regression m
 ---
 
 ## Project Overview
-The goal of this project is to predict the calories burned during physical activities using machine learning models. Various models, including Linear Regression, Random Forest, Gradient Boosting, Ridge and Lasso are trained and evaluated. The project also includes feature importance analysis to identify key factors influencing calorie burn.
+The goal of this project is to accurately predict the calories burned during physical activities using machine learning models. Various models, including Random Forest, Gradient Boosting, and Linear Regression, are trained and evaluated. The project also includes feature importance analysis to identify key factors influencing calorie burn.
 
 ## Dataset Description
 The dataset (`calories.csv` and `exercise.csv`) contains the following columns:
@@ -31,17 +31,22 @@ The dataset (`calories.csv` and `exercise.csv`) contains the following columns:
 - **Pairplot**: Explored relationships between pairs of features.
 
 ### 2. Data Preprocessing:
-- Dropped unnecessary columns (e.g., `User_id`).
-- Encoded categorical variables `Gender`.
+- Dropped unnecessary columns (`User_id`).
+- Encoded categorical variables (`Gender`).
 - Standardized numerical features to ensure uniform scaling.
+- Split the dataset into three sets:
+  - **Training Set (70%)**: Used to train the models.
+  - **Validation Set (15%)**: Used to evaluate and compare model performance.
+  - **Test Set (15%)**: Used for the final evaluation of the best model.
 
 ### 3. Model Training and Evaluation:
-- Models trained include:
+- Trained the following models:
   - Linear Regression
   - Ridge Regression
   - Lasso Regression
   - Random Forest Regressor
   - Gradient Boosting Regressor
+- Chose **Random Forest Regressor** as the best-performing model based on validation performance.
 - Performance metrics used:
   - Mean Absolute Error (MAE)
   - Mean Squared Error (MSE)
