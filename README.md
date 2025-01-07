@@ -69,4 +69,5 @@ The dataset (`calories.csv` and `exercise.csv`) contains the following columns:
 
 ### Insights from Feature Importance:
 - **Duration** is the most influential factor in predicting calorie burn.
-- Other features, such as `Heart_rate` and `Weight`, contribute marginally to the model's performance.
+- Other features, such as `Heart_rate` and `Age`, contribute marginally to the model's performance.
+- `Gender`, `Height`, `Weight` and `Body Temperature` appear to contribute negligibly, possibly because their impact is either too small to be significant in this dataset or because they are correlated with other features like `Age` or `Heart Rate`.
